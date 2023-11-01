@@ -43,7 +43,8 @@ class Solution:
                 for v in val:
                     Solution.fill_values(v, values)
             
-            test["value"] = Solution.get_value_by_id(test.get('id'), values)
+            if 'value' in test.keys():
+                test['value'] = Solution.get_value_by_id(test.get('id'), values)
 
 
     @staticmethod
